@@ -39,25 +39,25 @@ namespace Gremlin.Net.Process.Traversal.Step.Util
     {
 
 
-        public static string tokens = "~tinkerpop.valueMap.tokens";
+        public static readonly string tokens = "~tinkerpop.valueMap.tokens";
 
 
-        public static int none = 0;
+        public static readonly int none = 0;
 
 
-        public static int ids = 1;
+        public static readonly int ids = 1;
 
 
-        public static int labels = 2;
+        public static readonly int labels = 2;
 
 
-        public static int keys = 4;
+        public static readonly int keys = 4;
 
 
-        public static int values = 8;
+        public static readonly int values = 8;
 
 
-        public static int all = 15;
+        public static readonly int all = 15;
 
     }
 

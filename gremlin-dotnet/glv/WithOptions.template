@@ -39,7 +39,7 @@ namespace Gremlin.Net.Process.Traversal.Step.Util
     {
 <% withOptions.each { field -> %>
 
-        public static <%= field.type %> <%= field.name %> = <%= field.value %>;
+        public static readonly <%= field.type %> <%= field.name %> = <%= field.value %>;
 <% } %>
     }
 
