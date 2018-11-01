@@ -328,7 +328,7 @@ def binding = ["pmethods": P.class.getMethods().
                "tokens": gatherTokensFrom([IO, ConnectedComponent, ShortestPath, PageRank, PeerPressure]),
                "toCSharpMethodName": toCSharpMethodName,
                "withOptions": WithOptions.getDeclaredFields().
-                        collect {["type": toCSharpType(it.type.simpleName), "name": it.name, "value": toCSharpValue(it.type, it.get(null))]}]
+                        collect {["type": toCSharpType(it.type.simpleName), "name": toCSharpMethodName(it.name), "value": toCSharpValue(it.type, it.get(null))]}]
 
 def engine = new groovy.text.GStringTemplateEngine()
 def traversalTemplate = engine.createTemplate(new File("${projectBaseDir}/glv/GraphTraversal.template")).make(binding)

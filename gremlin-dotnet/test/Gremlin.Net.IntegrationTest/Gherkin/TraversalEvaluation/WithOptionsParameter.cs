@@ -42,7 +42,8 @@ namespace Gremlin.Net.IntegrationTest.Gherkin.TraversalEvaluation
         {
             _text = text;
             var separatorIndex = text.IndexOf('.');
-            _value = text.Substring(separatorIndex + 1);
+            var value = text.Substring(separatorIndex + 1);
+            _value = value.Substring(0, 1).ToUpper() + value.Substring(1);
         }
 
         public bool Equals(WithOptionsParameter other)
