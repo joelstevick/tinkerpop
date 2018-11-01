@@ -37,6 +37,7 @@ import org.apache.tinkerpop.gremlin.structure.VertexProperty;
 import org.apache.tinkerpop.gremlin.structure.util.StringFactory;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
@@ -169,7 +170,8 @@ public class PropertyMapStep<K,E> extends MapStep<Element, Map<K, E>>
     }
 
     public String toString() {
-        return StringFactory.stepString(this, this.traversalRing, this.returnType.name().toLowerCase());
+        return StringFactory.stepString(this, Arrays.asList(this.propertyKeys),
+                this.traversalRing, this.returnType.name().toLowerCase());
     }
 
     @Override
